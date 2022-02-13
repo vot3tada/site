@@ -1,0 +1,11 @@
+.aboba{
+    width:25%;position: relative;left: 50%;transform:translateX(-50%);
+}
+body,html{
+    height: 100%;
+}
+.abober{
+    position: relative;
+    top:50%;
+    transform:translateY(-75%)
+}
