@@ -1,8 +1,8 @@
 <?php
-    
-    $l = "";
     require("header.php");
+    $l = "";
     require("db.php");
+    require("autosingup.php");
     if (isset($_REQUEST['sub']))
     {
         $login = $_REQUEST['login'];
@@ -15,7 +15,6 @@
 
         if ($category == null)
         {
-            
             $query = "INSERT INTO `users` (`login`, `password`) VALUES (:login, :password);";
             $params = [
                 ':login' => $login,
@@ -23,6 +22,8 @@
             ];
             $stmt = $db->prepare($query);
             $stmt->execute($params);
+            $_SESSION['login']=$login;
+            $_SESSION['password']=$password;
         }
         else
         {
