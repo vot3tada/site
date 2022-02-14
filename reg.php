@@ -24,7 +24,7 @@
             $stmt->execute($params);
             $_SESSION['login']=$login;
             $_SESSION['password']=$password;
-            header("Location: main.php")
+            header("Location: main.php");
         }
         else
         {
