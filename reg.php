@@ -1,8 +1,8 @@
 <?php
+    
     $l = "";
     require("header.php");
     require("db.php");
-    
     if (isset($_REQUEST['sub']))
     {
         $login = $_REQUEST['login'];
@@ -37,6 +37,7 @@
     <input type="text" required placeholder="Логин" name="login" class="form-control mb-2 mr-sm-2">
     <input type="password" required placeholder="Пароль" name="password" class="form-control mb-2 mr-sm-2">
     <button type="submit" name="sub" class="btn btn-primary mb-2">Регистрация</button>
+    <a href="auth.php">Вход</a>
     <?php
         print("<p class='text-primary'>".$l."</p>");
     ?>

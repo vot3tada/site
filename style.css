@@ -9,3 +9,6 @@ body,html{
     top:50%;
     transform:translateY(-75%)
 }
+.headd{
+    display: inline-block;
+}
