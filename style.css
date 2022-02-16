@@ -14,5 +14,5 @@ body,html{
     left: 37%;
     width: 500px;
     top:50%;
-    transform:translateY(-50%)
+    transform:translateY(-50%);
 }
