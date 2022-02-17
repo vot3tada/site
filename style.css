@@ -16,3 +16,7 @@ body,html{
     top:50%;
     transform:translateY(-50%);
 }
+.cardab
+{
+    width: 350px;
+}

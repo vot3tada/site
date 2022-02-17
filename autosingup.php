@@ -1,4 +1,5 @@
 <?php
+    require("db.php");
     if (isset($_SESSION["login"]) && isset($_SESSION["password"]))
     {
         $stmt = $db->prepare("SELECT * FROM `users` WHERE `login` = ? AND `password` = ?");

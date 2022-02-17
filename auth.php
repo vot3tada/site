@@ -1,7 +1,6 @@
 <?php
     require("header.php");
     $l = "";
-    require("db.php");
     require("autosingup.php");
     if (isset($_REQUEST['sub']))
     {
