@@ -30,6 +30,9 @@
             <div class="card-body">
                 <h4 class="card-title text-primary">Привет, гость!</h4>
                 <p class="text-secondary">Для создания карточек зарегистрируйтесь на сайте</p>
+                <audio play controls autoplay style="width: 50%;max-width:600px;">
+                <source type="audio/mp3" style="width: 100px; height: 100px;" src="https://biffhard.sunproxy.net/file/TVY0czUyZHo4T09ockVIZW1temtRbXVzRnhoMXltZEcyeCtUeGtjbEpEMFdWMXlYMHFUTzFPUkwwbFdleVRzdVc5aWorM05kL0ZCbHpkTnl4Q3NJQnp4OEFhR0NWSzlxZVAwQUxPU1ltQjQ9/ZOG_-_Podlyj_evrejskij_DRIP_(BiffHard.click).mp3">
+                </audio>
             </div>
         </div>
     </div>
