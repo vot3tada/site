@@ -2,6 +2,10 @@
     require("header.php");
     $l = "";
     require("autosingup.php");
+    if (isset($_SESSION['login']))
+    {
+        header("Location: main.php");
+    }
     if (isset($_REQUEST['sub']))
     {
         $login = $_REQUEST['login'];

@@ -9,13 +9,6 @@ body,html{
     top:50%;
     transform:translateY(-75%)
 }
-.abober1{
-    position: relative;
-    left: 37%;
-    width: 500px;
-    top:50%;
-    transform:translateY(-50%);
-}
 .cardab
 {
     width: 350px;
