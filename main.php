@@ -4,7 +4,7 @@
 ?>
 <div class="cards">
     <div class="cardplace">
-        <div class="alert alert-primary">Задания</div>
+        <div class="alert alert-primary" style="margin-bottom: unset;">Задания</div>
         <?php
             if(isset($_SESSION['login']))
             {
@@ -14,7 +14,7 @@
         ?>
     </div>
     <div class="cardplace">
-    <div class="alert alert-primary">В процессе</div>
+    <div class="alert alert-primary" style="margin-bottom: unset;">В процессе</div>
     <?php
             if(isset($_SESSION['login']))
             {
@@ -23,7 +23,7 @@
         ?>
     </div>
     <div class="cardplace">
-    <div class="alert alert-primary">Готово</div>
+    <div class="alert alert-primary" style="margin-bottom: unset;">Готово</div>
     <?php
             if(isset($_SESSION['login']))
             {

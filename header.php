@@ -38,9 +38,17 @@
     <button type="submit" class="btn btn-primary" name="main">Веб-технологии</h1>
     </div>
     <div class="btn-group btn-group-lg">
-    <button type="submit" class="btn btn-secondary" name="reg">Регистрация</button>
-    <button type="submit" class="btn btn-secondary" name="singup">Вход</button>
-    <button type="submit" class="btn btn-secondary" name="singout">Выйти</button>
+    <?php
+        if (isset($_SESSION['login']))
+        {
+            print('<button type="submit" class="btn btn-secondary" name="singout">Выйти</button>');
+        }
+        else
+        {
+            print('<button type="submit" class="btn btn-secondary" name="reg">Регистрация</button>');
+            print('<button type="submit" class="btn btn-secondary" name="singup">Вход</button>');
+        }
+    ?>    
     </div>
     </div>
 </form>
