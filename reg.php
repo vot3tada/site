@@ -4,10 +4,12 @@
     require("autosingup.php");
     if (isset($_REQUEST['sub']))
     {
+        $_REQUEST['login'] = str_replace('<', '&#60;',$_REQUEST['login']);
+        $_REQUEST['login'] = str_replace('>', '&#62;',$_REQUEST['login']);
         $login = $_REQUEST['login'];
         $password = $_REQUEST['password'];
 
-
+        
         $stmt = $db->prepare("SELECT * FROM `users` WHERE `login` = ?");
         $stmt->execute([$login]);
         $category = $stmt->fetch(PDO::FETCH_ASSOC);

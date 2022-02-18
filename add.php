@@ -1,6 +1,10 @@
 <?php
 if (isset($_REQUEST['add']))
 {
+    $_REQUEST['name'] = str_replace('<', '&#60;',$_REQUEST['name']);
+    $_REQUEST['name'] = str_replace('>', '&#62;',$_REQUEST['name']);
+    $_REQUEST['description'] = str_replace('<', '&#60;',$_REQUEST['description']);
+    $_REQUEST['description'] = str_replace('>', '&#62;',$_REQUEST['description']);
     $query = "INSERT INTO `exercises` (`id`, `user`, `name`, `description`, `stage`) VALUES (NULL, :login, :name, :description, 0);";
     $params = [
         ':login' => $_SESSION['login'],

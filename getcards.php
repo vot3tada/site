@@ -7,6 +7,8 @@
       }
       if(isset($_REQUEST['edit']))
       {
+        $_REQUEST['description'] = str_replace('<', '&#60;',$_REQUEST['description']);
+        $_REQUEST['description'] = str_replace('>', '&#62;',$_REQUEST['description']);
         $stmt = $db->prepare("UPDATE `exercises` SET `description` = ? WHERE `id` = ?");
         $stmt->execute([$_REQUEST['description'],$_REQUEST['edit']]);
         header("Location:main.php");
