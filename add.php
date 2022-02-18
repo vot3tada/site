@@ -25,10 +25,10 @@ if (isset($_REQUEST['add']))
 <form action="main.php" method="POST" class="cardab">
     <div class="card">
     <div class="card-header">
-            <input type="text" name="name" placeholder="Название">
+            <input class="form-control" type="text" name="name" placeholder="Название">
             </div>
         <div class="card-body" style="display: flex;flex-direction: column;">
-            <textarea name="description" cols="30" rows="10" style="resize: none;" placeholder="Описание"></textarea>
+            <textarea class="form-control" name="description" cols="30" rows="10" style="resize: none;" placeholder="Описание"></textarea>
             <button type="submit" name="add" class="btn btn-success">Добавить</button>
         </div>
     </div>
