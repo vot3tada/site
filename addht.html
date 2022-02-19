@@ -1,0 +1,21 @@
+<div class="card">
+    <div class="card-header">
+        <input class="form-control" type="text" name="addname" placeholder="Название">
+    </div>
+    <div class="card-body" style="display: flex;flex-direction: column;">
+        <textarea class="form-control" name="adddescription" cols="30" rows="10" style="resize: none;" placeholder="Описание"></textarea>
+        <button type="submit" name="add" class="btn btn-success" onclick="add();">Добавить</button>
+    </div>
+</div>
+<script>
+    function add(){
+        var name = document.getElementsByName('addname')[0].value;
+        var description = document.getElementsByName('adddescription')[0].value;
+
+        $.ajax({
+            method: "POST",
+            url: "add.php",
+            data: {name: name, description: description}
+        });
+    }
+</script>

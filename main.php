@@ -7,7 +7,7 @@
         <div class="cardplace">
             <div class="alert alert-primary" style="margin-bottom: unset;">Задания</div>
         ');
-        require("add.php");
+        require("addht.html");
         require("getcards.php");
         print('</div>
         <div class="cardplace">
