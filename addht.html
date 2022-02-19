@@ -8,6 +8,7 @@
     </div>
 </div>
 <script>
+    var dump;
     function add(){
         var name = document.getElementsByName('addname')[0].value;
         var description = document.getElementsByName('adddescription')[0].value;
@@ -16,6 +17,8 @@
             method: "POST",
             url: "add.php",
             data: {name: name, description: description}
+        }).done(function(){
+            getcardstart();
         });
     }
 </script>
