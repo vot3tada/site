@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Фев 18 2022 г., 19:45
+-- Время создания: Фев 19 2022 г., 16:45
 -- Версия сервера: 10.3.16-MariaDB
 -- Версия PHP: 7.3.6
 
@@ -30,9 +30,9 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `exercises` (
   `id` int(11) NOT NULL,
-  `user` varchar(30) NOT NULL,
-  `name` varchar(30) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `description` varchar(500) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `user` varchar(32) NOT NULL,
+  `name` varchar(500) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `description` varchar(2000) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `stage` int(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -43,11 +43,10 @@ CREATE TABLE `exercises` (
 INSERT INTO `exercises` (`id`, `user`, `name`, `description`, `stage`) VALUES
 (35, 'votetada', 'Абоба', '-Купить абобу\r\n-Удалить абобу\r\n-Иван привет\r\n-хочу кушац\r\n', 1),
 (36, 'votetada', 'Тренировка', 'биг дата\r\nшоу юр мотивэшион', 2),
-(42, 'votetada', 'Че-нибудь', 'Купить хлеб и масло, вытряхнуть палас', 0),
+(42, 'votetada', 'Че-нибудь', 'Купить хлеб и масло, вытряхнуть палас', 1),
 (44, 'Aboba', 'Я второй пользователь', 'Хочу купить горилки', 0),
-(46, 'votetada', 'Карточка', 'Карта Я карта', 0),
 (47, 'votetada', 'Дивизия', 'Моя голова стального ведра,\r\nЯ слишком давно стою вот так.\r\nМасленка как знак, в девичьих руках\r\nЯ кажется вляпался как тогда\r\nИ все это бред, и сердца нет\r\nСоломенный дурень сгорит хохоча\r\nНо я не могу, я просто уйду\r\nПо дороге из желтого кирпича…\r\n', 2),
-(49, 'votetada', 'Скрипты не работают', '&#60;script&#62;alert(\"Привет\");&#60;/script&#62;\r\n&#60;script&#62;alert(\"ТУТУТУ\");&#60;/script&#62;', 0);
+(49, 'votetada', 'Скрипты не работают', '&#60;script&#62;alert(&#34;Привет&#34;);&#60;/script&#62;\r\n&#60;script&#62;alert(&#34;ТУТУТУ&#34;);&#60;/script&#62;', 0);
 
 -- --------------------------------------------------------
 
@@ -66,7 +65,6 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`login`, `password`) VALUES
 ('Aboba', '12345'),
-('admin', 'admin'),
 ('votetada', '1234');
 
 --
@@ -94,7 +92,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT для таблицы `exercises`
 --
 ALTER TABLE `exercises`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=84;
 
 --
 -- Ограничения внешнего ключа сохраненных таблиц

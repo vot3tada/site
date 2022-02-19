@@ -19,6 +19,8 @@
             data: {name: name, description: description}
         }).done(function(){
             getcardstart();
+            document.getElementsByName('addname')[0].value = "";
+            document.getElementsByName('adddescription')[0].value = "";
         });
     }
 </script>
